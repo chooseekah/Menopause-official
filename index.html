@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>28-Day Perimenopause Reset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="A gentle 28-day perimenopause reset to support your hormones, energy, mood, and metabolism."
+  />
+  <style>
+    :root {
+      --primary: #e46f8f;
+      --primary-dark: #c45475;
+      --accent: #f7d6e0;
+      --bg: #fff9fb;
+      --text: #333333;
+      --muted: #777777;
+      --max-width: 1100px;
+      --radius: 10px;
+      --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #f1d7e0;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-circle {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), #f9b4c8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 12px rgba(228, 111, 143, 0.4);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .brand-title {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+    }
+
+    .brand-subtitle {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 500;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 0.55rem 1.1rem;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(228, 111, 143, 0.4);
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.15s ease,
+        box-shadow 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 22px rgba(228, 111, 143, 0.5);
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .section {
+      padding: 3.5rem 1.25rem;
+    }
+
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    /* Hero */
+
+    .hero {
+      padding-top: 3rem;
+      padding-bottom: 3.5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: #fff2f6;
+      color: var(--primary-dark);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.9rem;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+
+    .hero-title {
+      font-size: clamp(2.1rem, 3vw + 1rem, 3rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title span {
+      color: var(--primary-dark);
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 32rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-list {
+      list-style: none;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .hero-list-icon {
+      margin-top: 0.15rem;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #eaf8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: #2f8a4b;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.9rem 1.7rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary), #f9b4c8);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 12px 30px rgba(228, 111, 143, 0.5);
+      transition: transform 0.15s ease, box-shadow 0.15s ease,
+        filter 0.15s ease;
+      text-align: center;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(228, 111, 143, 0.6);
+      filter: brightness(1.03);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid #f0c4d1;
+      background: #fff7fa;
+      color: var(--primary-dark);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease,
+        transform 0.15s ease;
+    }
+
+    .btn-secondary:hover {
+      background: #ffe9f1;
+      border-color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-note strong {
+      font-weight: 600;
+      color: #555555;
+    }
+
+    .hero-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1.8rem 1.6rem;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card-tag {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.4rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: #fff3c4;
+      color: #8b6a00;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-card-header {
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-card-subtitle {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .hero-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-pill {
+      padding: 0.7rem 0.8rem;
+      border-radius: 14px;
+      background: #fff7fb;
+      border: 1px solid #f4d3e0;
+      font-size: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .hero-pill-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .hero-pill-value {
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .hero-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-price {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .hero-price-old {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-decoration: line-through;
+    }
+
+    .hero-price-new {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+    }
+
+    .hero-price-note {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .hero-card-cta {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .hero-card-cta .btn-primary {
+      width: 100%;
+      padding-inline: 1.2rem;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 24px rgba(228, 111, 143, 0.5);
+    }
+
+    /* Benefits */
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 2.2rem;
+    }
+
+    .section-eyebrow {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--primary-dark);
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-size: 1.7rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 32rem;
+      margin: 0 auto;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .benefit-card {
+      background: #ffffff;
+      border-radius: var(--radius);
+      padding: 1.4rem 1.3rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid #f6dbe5;
+    }
+
+    .benefit-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #fff2f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-dark);
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+    }
+
+    .benefit-title {
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      font-size: 1rem;
+    }
+
+    .benefit-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.7rem;
+    }
+
+    .benefit-tag {
+      display: inline-flex;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: #fff7fb;
+      font-size: 0.75rem;
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    /* How it works */
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 0.9rem;
+      align-items: flex-start;
+    }
+
+    .step-number {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background: #fff2f6;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .step-title {
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+      font-size: 0.95rem;
+    }
+
+    .step-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .how-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.6rem 1.5rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid #f6dbe5;
+    }
+
+    .how-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .how-badge {
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: #fff7fb;
+      font-size: 0.75rem;
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    .how-list {
+      list-style: none;
+      margin-bottom: 1.2rem;
+    }
+
+    .how-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .how-dot {
+      margin-top: 0.4rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+
+    .how-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .how-cta-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* Testimonials */
+
+    .testimonials {
+      background: #fff2f6;
+    }
+
+    .testimonials-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .testimonial-card {
+      background: #ffffff;
+      border-radius: var(--radius);
+      padding: 1.3rem 1.2rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid #f7dbe6;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonial-quote-mark {
+      position: absolute;
+      top: 0.7rem;
+      right: 0.9rem;
+      font-size: 2.5rem;
+      color: #ffe3f0;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .testimonial-text {
+      font-size: 0.9rem;
+      color: #555555;
+      margin-bottom: 0.9rem;
+    }
+
+    .testimonial-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .testimonial-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .stars {
+      color: #f5a623;
+      font-size: 0.85rem;
+      margin-bottom: 0.4rem;
+    }
+
+    /* FAQ */
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 0.9rem 1rem;
+      border: 1px solid #f4d3e0;
+    }
+
+    .faq-q {
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .faq-a {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .faq-highlight {
+      background: #fff7fb;
+      border-radius: 16px;
+      padding: 1.3rem 1.2rem;
+      border: 1px dashed #f4b9cf;
+    }
+
+    .faq-highlight-title {
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .faq-highlight-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    /* Final CTA */
+
+    .cta {
+      background: #ffffff;
+      border-top: 1px solid #f4d3e0;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, #ffe9f2, #fff9fb);
+      border-radius: 24px;
+      padding: 2rem 1.8rem;
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .cta-title {
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .cta-text {
+      font-size: 0.95rem;
+      color: #555555;
+      margin-bottom: 1rem;
+    }
+
+    .cta-guarantee {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .cta-right {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      align-items: flex-start;
+    }
+
+    .cta-price-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .cta-price-old {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: line-through;
+    }
+
+    .cta-price-new {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+    }
+
+    .cta-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+    }
+
+    .cta-badge {
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid #f4d3e0;
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    footer {
+      padding: 1.5rem 1.25rem 2rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--primary-dark);
+      font-weight: 500;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .how-grid,
+      .faq-grid,
+      .cta-box {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-card-cta {
+        justify-content: flex-start;
+      }
+
+      .hero-card-cta .btn-primary {
+        width: auto;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .benefits-grid,
+      .testimonials-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .section {
+        padding: 3rem 1.1rem;
+      }
+
+      .hero {
+        padding-top: 2.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-card-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-cta-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="nav">
+        <div class="nav-left">
+          <div class="logo-circle">HH</div>
+          <div class="brand-text">
+            <div class="brand-title">Happy Healing Girl</div>
+            <div class="brand-subtitle">28-Day Perimenopause Reset</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#benefits">Benefits</a>
+          <a href="#how">How it works</a>
+          <a href="#testimonials">Stories</a>
+          <a href="#faq">FAQ</a>
+          <a
+            class="nav-cta"
+            href="https://5c4135pox0s31qcdllxcl6uco4.hop.clickbank.net"
+            >Join the reset</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="section hero" id="top">
+        <div class="section-inner">
+          <div class="hero-grid">
+            <div>
+              <div class="eyebrow">
+                <span class="eyebrow-dot"></span>
+                28-Day Perimenopause Reset
+              </div>
+              <h1 class="hero-title">
+                Feel like <span>yourself</span> again in just 28 days.
+              </h1>
+              <p class="hero-subtitle">
+                A gentle, step-by-step reset designed for women in
+                perimenopause—supporting hormones, energy, mood, sleep, and
+                metabolism without extreme diets or overwhelm.
+              </p>
+
+              <ul class="hero-list">
+                <li>
+                  <div class="hero-list-icon">✓</div>
+                  <div>
+                    Daily, doable actions that fit into real life—no complicated
+                    protocols or hours in the kitchen.
+                  </div>
+                </li>
+                <li>
+                  <div class="hero-list-icon">✓</div>
+                  <div>
+                    Nourishing recipes, hormone-supportive habits, and nervous
+                    system calming tools.
+                  </div>
+                </li>
+                <li>
+                  <div class="hero-list-icon">✓</div>
+                  <div>
+                    Created specifically for the unique changes of
+                    perimenopause—not a generic “one-size-fits-all” plan.
+                  </div>
+                </li>
+              </ul>
+
+              <div class="hero-cta-row">
+                <a
+                  href="https://5c4135pox0s31qcdllxcl6uco4.hop.clickbank.net"
+                  class="btn-primary"
+                >
+                  Start the 28-day reset
+                </a>
+                <a
+                  href="https://5c4135pox0s31qcdllxcl6uco4.hop.clickbank.net"
+                  class="btn-secondary"
+                >
+                  See everything you get
+                </a>
+              </div>
+              <p class="hero-note">
+                <strong>Instant digital access.</strong> Begin today at your own
+                pace—no waiting, no subscription.
+              </p>
+            </div>
+
+            <div>
+              <div class="hero-card">
+                <div class="hero-card-header">
+                  <div class="hero-card-title">
+                    What’s inside the 28-Day Perimenopause Reset
+                  </div>
+                  <div class="hero-card-subtitle">
+                    A complete, self-paced roadmap to support your changing
+                   hormones.
+                  </div>
+                </div>
+
+                <div class="hero-card-grid">
+                  <div class="hero-pill">
+                    <div class="hero-pill-label">Daily plan</div>
+                    <div class="hero-pill-value">28 guided days</div>
+                    <div style="font-size: 0.8rem; color: var(--muted);">
+                      Simple checklists & prompts so you always know what to do.
+                    </div>
+                  </div>
+                  <div class="hero-pill">
+                    <div class="hero-pill-label">Nutrition</div>
+                    <div class="hero-pill-value">Hormone-friendly</div>
+                    <div style="font-size: 0.8rem; color: var(--muted);">
+                      Blood-sugar balancing meals & snacks to steady energy.
+                    </div>
+                  </div>
+                  <div class="hero-pill">
+                    <div class="hero-pill-label">Nervous system</div>
+                    <div class="hero-pill-value">Calming tools</div>
+                    <div style="font-size: 0.8rem; color: var(--muted);">
+                      Short practices to ease anxiety, irritability & stress.
+                    </div>
+                  </div>
+                  <div class="hero-pill">
+                    <div class="hero-pill-label">Support</div>
+                    <div class="hero-pill-value">Mind–body focus</div>
+                    <div style="font-size: 0.8rem; color: var(--muted);">
+                      Gentle movement, sleep rituals & self-compassion work.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hero-card-footer">
+                  <div class="hero-price">
+                    <div class="hero-price-old">$197</div>
+                    <div class="hero-price-new">$47 today</div>
+                    <div class="hero-price-note">
+                      One-time payment • Lifetime access
+                    </div>
+                  </div>
+                  <div class="hero-card-cta">
+                    <a
+                      href="https://5c4135pox0s31qcdllxcl6uco4.hop.clickbank.net"
+                      class="btn-primary"
+                    >
+                      Get instant access
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits -->
+      <section class="section" id="benefits">
+        <div class="section-inner">
+          <div class="section-heading">
+            <div class="section-eyebrow">Why this reset works</div>
+            <h2 class="section-title">
+              Support the root causes of perimenopause symptoms.
+            </h2>
+            <p class="section-subtitle">
+              Instead of chasing each symptom separately, this reset focuses on
+              stabilizing blood sugar, calming your nervous system, and
+              supporting hormone metabolism—three powerful levers during
+              perimenopause.
+            </p>
+          </div>
+
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <div class="benefit-icon">💤</div>
+              <div class="benefit-title">More restful sleep</div>
+              <div class="benefit-text">
+                Evening rituals, nervous system downshifting, and blood-sugar
+                friendly dinners to help you fall asleep faster and stay asleep
+                longer.
+              </div>
+              <div class="benefit-tag">Sleep & nervous system</div>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-icon">⚖️</div>
+              <div class="benefit-title">Steadier moods & fewer crashes</div>
+              <div class="benefit-text">
+                Gentle nutrition and daily grounding practices to reduce
+                irritability, anxiety spikes, and emotional rollercoasters.
+              </div>
+              <div class="benefit-tag">Mood & energy</div>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-icon">🔥</div>
+              <div class="benefit-title">Support for hot flashes & weight</div>
+              <div class="benefit-text">
+                A focus on inflammation, blood sugar, and liver support to help
+                ease hot flashes and stubborn midsection weight.
+              </div>
+              <div class="benefit-tag">Hormone balance</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section class="section" id="how">
+        <div class="section-inner">
+          <div class="how-grid">
+            <div>
+              <div class="section-eyebrow">Inside the 28 days</div>
+              <h2 class="section-title">A simple, structured path.</h2>
+              <p class="section-subtitle" style="text-align: left;">
+                You don’t need perfection—you need a clear, compassionate plan
+                that meets you where you are and builds momentum day by day.
+              </p>
+
+              <div class="steps">
+                <div class="step">
+                  <div class="step-number">1</div>
+                  <div>
+                    <div class="step-title">Week 1: Stabilize & soothe</div>
+                    <div class="step-text">
+                      Focus on blood sugar balance, hydration, and nervous
+                      system calming so your body can finally exhale and feel
+                      safe again.
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">2</div>
+                  <div>
+                    <div class="step-title">Week 2: Nourish & replenish</div>
+                    <div class="step-text">
+                      Layer in mineral-rich foods, hormone-supportive meals, and
+                      gentle movement to rebuild energy and resilience.
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">3</div>
+                  <div>
+                    <div class="step-title">Week 3: Detox & release</div>
+                    <div class="step-text">
+                      Support liver and gut pathways that help your body process
+                      hormones, reduce bloat, and ease inflammation.
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">4</div>
+                  <div>
+                    <div class="step-title">Week 4: Integrate & sustain</div>
+                    <div class="step-text">
+                      Turn your favorite tools from the reset into sustainable
+                      habits so you can keep feeling better long after day 28.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="how-card">
+                <div class="how-badge-row">
+                  <div class="how-badge">No extreme dieting</div>
+                  <div class="how-badge">No calorie counting</div>
+                  <div class="how-badge">No perfection required</div>
+                </div>
+                <ul class="how-list">
+                  <li>
+                    <div class="how-dot"></div>
+                    <div>
+                      Daily overview so you always know the “one thing” to focus
+                      on—even on busy days.
+                    </div>
+                  </li>
+                  <li>
+                    <div class="how-dot"></div>
+                    <div>
+                      Flexible structure: follow the plan day-by-day or move at
+                      your own pace and repeat weeks as needed.
+                    </div>
+                  </li>
+                  <li>
+                    <div class="how-dot"></div>
+                    <div>
+                      Designed to complement your existing care—works alongside
+                      your doctor, therapist, or other providers.
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="how-cta">
+                  <a
+                    href="https://5c4135pox0s31qcdllxcl6uco4.hop.clickbank.net"
+                    class="btn-primary"
+                  >
+                    Begin your 28-day reset
+                  </a>
+                  <div class="how-cta-note">
+                    Instant access to all materials. Start today or whenever
+                    you’re ready—your reset is waiting for you.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="section testimonials" id="testimonials">
+        <div class="testimonials-inner">
+          <div class="section-heading">
+            <div class="section-eyebrow">Real women, real relief</div>
+            <h2 class="section-title">Stories from the reset.</h2>
+            <p class="section-subtitle">
+              Every journey is unique, but you don’t have to walk through
+              perimenopause alone. Here’s what women are experiencing after
+              committing to 28 days of gentle, consistent support.
+            </p>
+          </div>
+
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-quote-mark">“</div>
+              <div class="stars">★★★★★</div>
+              <div class="testimonial-text">
+                “By week two my 3 a.m. wakeups were happening less and I wasn’t
+                snapping at everyone by lunchtime. The small daily steps felt
+                doable, even on my busiest days.”
+              </div>
+              <div class="testimonial-name">Sarah, 44</div>
+              <div class="testimonial-meta">Sleep & mood improvements</div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-quote-mark">“</div>
+              <div class="stars">★★★★★</div>
+              <div class="testimonial-text">
+                “I finally understood how much my blood sugar was affecting my
+                anxiety and hot flashes. The food framework is simple and I
+                don’t feel deprived.”
+              </div>
+              <div class="testimonial-name">Monica, 47</div>
+              <div class="testimonial-meta">Less anxiety & fewer hot flashes</div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-quote-mark">“</div>
+              <div class="stars">★★★★★</div>
+              <div class="testimonial-text">
+                “I’ve tried so many things, but this was the first time I felt
+                like someone actually understood perimenopause. I feel calmer in
+                my body and more hopeful about this season.”
+              </div>
+              <div class="testimonial-name">Dana, 42</div>
+              <div class="testimonial-meta">More energy & confidence</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq">
+        <div class="section-inner">
+          <div class="faq-grid">
+            <div>
+              <div class="section-eyebrow">Questions</div>
+              <h2 class="section-title">Frequently asked questions.</h2>
+              <p class="section-subtitle" style="text-align: left;">
+                If you’re wondering whether this reset is right for you, these
+                answers may help you decide.
+              </p>
+
+              <div class="faq-list">
+                <div class="faq-item">
+                  <div class="faq-q">
+                    Do I need to be officially “in perimenopause” to join?
+                  </div>
+                  <div class="faq-a">
+                    No diagnosis is required. This reset is designed for women
+                    who suspect they’re in perimenopause or are already
+                    experiencing symptoms like cycle changes, sleep issues,
+                    anxiety, hot flashes, or weight shifts.
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <div class="faq-q">
+                    How much time will this take each day?
+                  </div>
+                  <div class="faq-a">
+                    Most days can be completed in 20–30 minutes total, woven
+                    into your existing routine. You’ll get a clear daily focus
+                    so you can do what matters most without feeling overwhelmed.
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <div class="faq-q">
+                    Is this a strict diet or detox? Will I be hungry?
+                  </div>
+                  <div class="faq-a">
+                    This is not a crash diet or deprivation plan. The focus is
+                    on nourishment, blood sugar balance, and gentle support for
+                    your hormones and nervous system—not restriction.
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <div class="faq-q">
+                    Can I do this if I’m on medication or HRT?
+                  </div>
+                  <div class="faq-a">
+                    The reset is designed as a lifestyle and nutrition support
+                    framework and can often complement medical care. Always
+                    check with your healthcare provider before making changes to
+                    your routine.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="faq-highlight">
+                <div class="faq-highlight-title">
+                  Ready to feel more at home in your body again?
+                </div>
+                <div class="faq-highlight-text">
+                  Perimenopause doesn’t have to feel like everything is falling
+                  apart. With the right support, this can be a season of
+                  reconnection, clarity, and deep self-care.
+                </div>
+                <a
+                  href="https://5c4135pox0s31qcdllxcl6uco4.hop.clickbank.net"
+                  class="btn-primary"
+                  style="width: 100%; justify-content: center;"
+                >
+                  Yes, I’m ready for the reset
+                </a>
+                <p
+                  style="
+                    font-size: 0.8rem;
+                    color: var(--muted);
+                    margin-top: 0.7rem;
+                  "
+                >
+                  One-time payment • Instant access • Go at your own pace
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="section cta">
+        <div class="section-inner">
+          <div class="cta-box">
+            <div>
+              <h2 class="cta-title">
+                Start your 28-day perimenopause reset today.
+              </h2>
+              <p class="cta-text">
+                Imagine 4 weeks from now: deeper sleep, fewer crashes, steadier
+                moods, and a toolkit you can return to anytime your hormones
+                shift. You deserve to feel supported in this season—not confused
+                or alone.
+              </p>
+              <p class="cta-guarantee">
+                This reset is a gentle invitation to come back to yourself, one
+                small step at a time.
+              </p>
+            </div>
+            <div class="cta-right">
+              <div class="cta-price-row">
+                <div class="cta-price-old">$197</div>
+                <div class="cta-price-new">$47 today</div>
+              </div>
+              <div class="cta-badges">
+                <div class="cta-badge">Instant digital access</div>
+                <div class="cta-badge">Lifetime updates</div>
+                <div class="cta-badge">Self-paced</div>
+              </div>
+              <a
+                href="https://5c4135pox0s31qcdllxcl6uco4.hop.clickbank.net"
+                class="btn-primary"
+                style="margin-top: 0.6rem; width: 100%; justify-content: center;"
+              >
+                Get instant access now
+              </a>
+              <a
+                href="https://5c4135pox0s31qcdllxcl6uco4.hop.clickbank.net"
+                class="btn-secondary"
+                style="width: 100%; justify-content: center;"
+              >
+                View full program details
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        This page is for informational and educational purposes only and is not
+        a substitute for professional medical advice, diagnosis, or treatment.
+        Always consult your healthcare provider with any questions about your
+        health.
+      </div>
+      <div style="margin-top: 0.6rem;">
+        ©
+        <span id="year"></span>
+        Happy Healing Girl · All rights reserved.
+      </div>
+      <div style="margin-top: 0.4rem;">
+        <a
+          href="https://5c4135pox0s31qcdllxcl6uco4.hop.clickbank.net"
+          >Program access</a
+        >
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Simple year updater
+    document.getElementById("year").textContent =
+      new Date().getFullYear().toString();
+  </script>
+</body>
+</html>
